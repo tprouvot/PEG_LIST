@@ -232,7 +232,7 @@ public with sharing class sfpegMerge_CTL {
             String token = lblMatcher.group(0).removeStart('{{{LBL.').removeEnd('}}}');
             lblTokens.add(token);
         }
-        System.debug(LoggingLevel.FINE,'replaceLabelTokens: lblTokens extracted ' + lblTokens);
+        System.debug(LoggingLevel.FINE,'replaceLabelTokens: lblTokens extracted ' + lblTokens);// NOPMD ApexDangerousMethods supress warning
 
         if (lblTokens.size() > 0) {
             //Fetching LBL values
@@ -292,7 +292,7 @@ public with sharing class sfpegMerge_CTL {
             String token = lblMatcher.group(0).removeStart('{{{FLBL.').removeEnd('}}}');
             lblTokens.add(token);
         }
-        System.debug(LoggingLevel.FINE,'replaceFieldLabelTokens: lblTokens extracted ' + lblTokens);
+        System.debug(LoggingLevel.FINE,'replaceFieldLabelTokens: lblTokens extracted ' + lblTokens);// NOPMD ApexDangerousMethods supress warning
 
         //Fetching FLBL values and merging them
         String mergedTemplate = template;
